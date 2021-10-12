@@ -1,7 +1,7 @@
 
 **/*.iml
 
-**/idea/
+**/.idea/
 
 **/target/
 
@@ -9,4 +9,4 @@
 
 */*.iml
 
-*/idea/
+*/.idea/
