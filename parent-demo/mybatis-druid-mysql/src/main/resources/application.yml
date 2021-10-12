@@ -1,0 +1,17 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: mybatis-druid-mysql
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: wangchao
+mybatis:
+  type-aliases-package: com.felixwc.mybatis.druid.mysql.pojo
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+  configuration:
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+
