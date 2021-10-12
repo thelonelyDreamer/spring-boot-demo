@@ -10,6 +10,7 @@
         <module name="mybatis-druid-mysql" />
         <module name="springboot-mybatisplus" />
         <module name="swagger2" />
+        <module name="bean-details" />
         <module name="hello" />
       </profile>
     </annotationProcessing>
