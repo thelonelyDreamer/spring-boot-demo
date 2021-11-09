@@ -14,6 +14,7 @@
         <module>swagger2</module>
         <module>bean-details</module>
         <module>thymeleaf</module>
+        <module>spring-security</module>
     </modules>
     <properties>
         <druid.version>1.2.6</druid.version>

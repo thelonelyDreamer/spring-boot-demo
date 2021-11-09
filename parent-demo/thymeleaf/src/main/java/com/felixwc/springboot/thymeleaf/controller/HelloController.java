@@ -1,10 +1,9 @@
 package com.felixwc.springboot.thymeleaf.controller;
 
+import com.felixwc.springboot.thymeleaf.pojo.test.UserVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * in order to learn java!
@@ -26,5 +25,12 @@ public class HelloController {
     @ResponseBody
     public String hi(){
         return "hi";
+    }
+
+    @GetMapping("/user/{name}")
+    public String testUser(@PathVariable String name,Model model){
+        UserVO userVO = new UserVO().setName(name);
+        model.addAttribute("user",userVO);
+        return "test/user";
     }
 }
