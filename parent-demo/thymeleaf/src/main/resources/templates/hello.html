@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>这是测试界面</title>
+</head>
+<body>
+    <div>
+        <p th:text="${hello}"></p>
+        <a th:href="@{/hello/hi}" th:target="_blank">访问/hello/hi</a>
+        <a href="http://www.baidu.com" target="_blank" style="color: red">友情链接</a>
+    </div>
+</body>
+</html>

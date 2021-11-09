@@ -13,6 +13,7 @@
         <module>springboot-mybatisplus</module>
         <module>swagger2</module>
         <module>bean-details</module>
+        <module>thymeleaf</module>
     </modules>
     <properties>
         <druid.version>1.2.6</druid.version>
