@@ -15,6 +15,13 @@
         <module>bean-details</module>
         <module>thymeleaf</module>
         <module>spring-security</module>
+        <module>303</module>
+        <module>hello</module>
+        <module>mvc</module>
+        <module>jpa</module>
+        <module>redis6</module>
+        <module>aop</module>
+        <module>springboot-mybatis-plus3_5</module>
     </modules>
     <properties>
         <druid.version>1.2.6</druid.version>

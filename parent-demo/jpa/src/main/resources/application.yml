@@ -1,0 +1,13 @@
+server:
+  port: 10000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa
+    username: root
+    password: wangchao
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    # 显示sql
+    show-sql: true

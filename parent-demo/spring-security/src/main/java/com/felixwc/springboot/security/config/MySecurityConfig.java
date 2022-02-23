@@ -3,7 +3,6 @@ package com.felixwc.springboot.security.config;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -37,13 +36,13 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin().loginPage("/login.html").loginProcessingUrl("/user/login")
-                .defaultSuccessUrl("/index.html").permitAll()
-                .and()
-                .authorizeRequests().antMatchers("/","/user/login").permitAll()
-                .antMatchers(HttpMethod.POST).hasAuthority("modify")
-                .anyRequest().authenticated()
-                .and().csrf().disable();
-        http.sessionManagement().maximumSessions(1);
+//        http.formLogin().loginPage("/login.html").loginProcessingUrl("/user/login")
+//                .defaultSuccessUrl("/index.html").permitAll()
+//                .and()
+//                .authorizeRequests().antMatchers("/","/user/login").permitAll()
+//                .antMatchers(HttpMethod.POST).hasAuthority("modify")
+//                .anyRequest().authenticated()
+//                .and().csrf().disable();
+//        http.sessionManagement().maximumSessions(1);
     }
 }

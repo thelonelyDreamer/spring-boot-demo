@@ -19,9 +19,10 @@ import java.util.List;
  */
 @Service("userDetailsService")
 public class MyUserDetailsService implements UserDetailsService {
+
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        List<GrantedAuthority> role = AuthorityUtils.commaSeparatedStringToAuthorityList("root");
+        List<GrantedAuthority> role = AuthorityUtils.commaSeparatedStringToAuthorityList("root,ADMIN");
         User user = new User("root", new BCryptPasswordEncoder().encode("123"), role);
         return user;
     }

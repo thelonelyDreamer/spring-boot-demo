@@ -1,17 +1,19 @@
-package com.felixwc.springboot.swagger2;
+package com.felixwc.springboot.aop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * in order to learn java!
- * created at 2021/9/18 23:11
+ * created at 2022/2/6 02:13
  *
  * @author wangchao
  */
 @SpringBootApplication
-public class MainApp {
+@EnableAspectJAutoProxy
+public class BootAopApp {
     public static void main(String[] args) {
-        SpringApplication.run(MainApp.class,args);
+        SpringApplication.run(BootAopApp.class,args);
     }
 }

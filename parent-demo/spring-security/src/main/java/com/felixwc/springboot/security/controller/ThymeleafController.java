@@ -1,5 +1,6 @@
 package com.felixwc.springboot.security.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class ThymeleafController {
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/test")
     public String test1(){
         return "index";
