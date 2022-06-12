@@ -13,6 +13,7 @@
         <module>springboot-boot-analysis</module>
         <module>springboot-beans</module>
         <module>springboot-start</module>
+        <module>transaction</module>
     </modules>
 
     <properties>
