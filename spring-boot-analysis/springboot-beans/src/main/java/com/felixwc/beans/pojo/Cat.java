@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @author wangchao
  */
 @Component
-public class Cat implements FactoryBean, DisposableBean, BeanPostProcessor {
+public class Cat implements FactoryBean<Cat>, DisposableBean, BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
@@ -24,11 +24,10 @@ public class Cat implements FactoryBean, DisposableBean, BeanPostProcessor {
         return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
     }
 
-    @Override
-    public Object getObject() throws Exception {
-        System.out.println("cat getObject");
-        return new Cat();
 
+    @Override
+    public Cat getObject() throws Exception {
+        return null;
     }
 
     @Override

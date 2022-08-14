@@ -36,7 +36,6 @@ public class GoodStoreService {
         good.setGoodId(1L);
         good.setGoodStore(100);
         dao.save(good);
-        throw new NullPointerException();
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
