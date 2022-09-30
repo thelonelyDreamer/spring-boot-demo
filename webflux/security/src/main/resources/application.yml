@@ -1,0 +1,9 @@
+server:
+  port: 10002
+
+spring:
+  security:
+    user:
+      roles: root,admin
+      password: root
+      name: root
