@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
+<button id="add">websocket</button>
+<script>
+    var webSocket = new WebSocket("ws://localhost:10000/websocket/1");
 
+    document.getElementById("add").addEventListener("click",()=>{
+        console.log("hello")
+        webSocket.send("123")
+    })
+    webSocket.onmessage=ev => {
+        console.log(ev)
+    }
+</script>
 </body>
 </html>
